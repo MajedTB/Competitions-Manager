@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.promptDeleteController">
+   <children>
+      <Label fx:id="lblMessage" alignment="CENTER" prefHeight="176.0" prefWidth="1143.0" text="Are you sure you want to delete XXX ?" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="62.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="90.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#backToBrowseMenu" prefHeight="68.0" prefWidth="270.0" text="Cancel">
+               <font>
+                  <Font name="Rockwell" size="40.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteCompetition" prefHeight="68.0" prefWidth="270.0" text="Delete">
+               <font>
+                  <Font name="Rockwell" size="40.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

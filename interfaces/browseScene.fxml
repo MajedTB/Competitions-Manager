@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BrowseController">
+   <left>
+      <ListView fx:id="listViewComp" prefHeight="800.0" prefWidth="266.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#backToMainMenu" text="Back to Main Menu" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblCompName" text="Competition Name">
+               <font>
+                  <Font name="Rockwell" size="73.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCompDate" layoutX="303.0" layoutY="373.0" text="dd/mm/yy">
+               <font>
+                  <Font name="Rockwell" size="51.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="1014.0" spacing="20.0">
+               <children>
+                  <Label fx:id="lblWebsite" alignment="CENTER" prefHeight="33.0" prefWidth="691.0" text="website">
+                     <font>
+                        <Font name="Rockwell" size="28.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <HBox alignment="CENTER" prefHeight="66.0" prefWidth="1014.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btVisitWebsite" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#browseWebsiteScene" prefHeight="41.0" prefWidth="302.0" text="Visit Competition Website">
+                     <font>
+                        <Font name="Rockwell" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="480.0" prefHeight="44.0" prefWidth="1014.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btAddStudents" alignment="CENTER" disable="true" layoutX="259.0" layoutY="12.0" mnemonicParsing="false" onAction="#addStudentsScene" prefHeight="41.0" prefWidth="159.0" text="Add Students">
+                     <font>
+                        <Font name="Rockwell" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btView" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#viewScene" prefHeight="41.0" prefWidth="159.0" text="View Details">
+                     <font>
+                        <Font name="Rockwell" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btEdit" alignment="CENTER" disable="true" layoutX="438.0" layoutY="12.0" mnemonicParsing="false" onAction="#editScene" prefHeight="41.0" prefWidth="159.0" text="Edit">
+                     <font>
+                        <Font name="Rockwell" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btDelete" alignment="CENTER" disable="true" layoutX="527.0" layoutY="12.0" mnemonicParsing="false" onAction="#deleteCompetition" prefHeight="41.0" prefWidth="159.0" text="Delete">
+                     <font>
+                        <Font name="Rockwell" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

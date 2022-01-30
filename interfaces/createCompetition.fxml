@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CreateCompController">
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#backToMainMenu" text="Back to Main Menu" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Create a New Competition">
+               <font>
+                  <Font name="Rockwell Bold" size="56.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="64.0" prefWidth="1280.0" spacing="15.0">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="215.0" text="Competition Type:">
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Label>
+                  <Group>
+                     <children>
+                        <RadioButton mnemonicParsing="false" selected="true" text="Solo-based">
+                           <font>
+                              <Font name="Rockwell" size="25.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="type" />
+                           </toggleGroup>
+                        </RadioButton>
+                     </children>
+                  </Group>
+                  <RadioButton mnemonicParsing="false" text="Team-based" toggleGroup="$type">
+                     <font>
+                        <Font name="Rockwell" size="25.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="387.0" prefHeight="48.0" prefWidth="1280.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="250.0" text="Competition Name:">
+                     <font>
+                        <Font name="Rockwell" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="compName" prefHeight="50.0" prefWidth="400.0">
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="437.0" prefHeight="52.0" prefWidth="1280.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="250.0" text="Competition Due Date:">
+                     <font>
+                        <Font name="Rockwell" size="22.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="compDate" editable="false" prefHeight="50.0" prefWidth="400.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="487.0" prefHeight="43.0" prefWidth="1280.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="250.0" text="Competition Website:">
+                     <font>
+                        <Font name="Rockwell" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="compWebsite" prefHeight="36.0" prefWidth="400.0">
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Button fx:id="btSave" mnemonicParsing="false" onAction="#saveCompetitionInfo" prefHeight="56.0" prefWidth="250.0" text="Save Competition">
+               <font>
+                  <Font name="Rockwell" size="23.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblError" alignment="CENTER" prefHeight="31.0" prefWidth="571.0" textFill="RED">
+               <font>
+                  <Font name="Rockwell Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

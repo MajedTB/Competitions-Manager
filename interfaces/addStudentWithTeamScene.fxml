@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddStudentWithTeamController">
+   <center>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onInputMethodTextChanged="#autoFill" prefHeight="800.0" prefWidth="1280.0" spacing="10.0">
+         <children>
+            <Label fx:id="lblTitle" alignment="CENTER" prefHeight="122.0" prefWidth="1280.0" text="Add a Student to X" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Rockwell Bold" size="55.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="387.0" prefHeight="30.0" prefWidth="1280.0" spacing="15.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="170.0" text="Student Name">
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="studentNameField" prefHeight="51.0" prefWidth="477.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="403.0" prefHeight="30.0" prefWidth="1280.0" spacing="15.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="170.0" text="Student ID">
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idField" prefHeight="51.0" prefWidth="186.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="164.0" text="Student Major">
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="majorField" prefHeight="51.0" prefWidth="96.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="429.0" prefHeight="30.0" prefWidth="1280.0" spacing="15.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="170.0" text="Team Name">
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="teamList" editable="true" onAction="#autoFill" prefHeight="51.0" prefWidth="226.0" promptText="Enter or Select an Existant Team" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="131.0" text="Team No.">
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teamNumberField" prefHeight="51.0" prefWidth="100.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="159.0" text="Team Rank#">
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="rankField" prefHeight="51.0" prefWidth="100.0" promptText="optional">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#addToCompetition" prefHeight="27.0" prefWidth="180.0" text="Add">
+               <font>
+                  <Font name="Rockwell" size="31.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblMessage" alignment="CENTER" prefHeight="36.0" prefWidth="1280.0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Rockwell" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#backToMainMenu" text="Back to Main Menu" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+   </bottom>
+</BorderPane>
