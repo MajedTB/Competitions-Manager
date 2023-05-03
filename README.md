@@ -1,4 +1,4 @@
-# Competitions-Manager (repository not yet complete)
+# Competitions-Manager
 TThis was a team project, our team cosisted of 5 people.
 the project focus on building the software using the Software Development Life Cycle (SDLC) models, project mangagment and user experience (UX). 
 the project was writted in java, using JavaFX library for UI.
